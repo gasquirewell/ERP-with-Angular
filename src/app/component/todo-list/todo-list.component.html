@@ -1,0 +1,21 @@
+
+<div>
+  <h3>TO DO LIST</h3>
+  <input [(ngModel)]= "todoText" type="text" class="form-control">
+  <button (click)="saveTodo()" class="btn btn-outline-primary btn-sm">Add</button>
+</div>
+
+
+<div class="list">
+
+<ul>
+  <li *ngFor="let todo of todoList">{{ todo }}
+
+    <div (click)="todoCliked(todo)">
+        <input type="checkbox">
+        <label> {{ todo }}</label>
+    </div>
+
+  </li>
+</ul>
+</div>
